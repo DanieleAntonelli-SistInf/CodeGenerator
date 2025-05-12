@@ -17,6 +17,6 @@ public class SecondoController : ControllerBase
     [HttpGet]
     public string Test()
     {
-        return "test";
+        return secondoServizio.GetString();
     }
 }

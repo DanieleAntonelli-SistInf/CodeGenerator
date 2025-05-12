@@ -1,4 +1,3 @@
-using WebApp.Controllers;
 using WebApp.Services;
 
 namespace WebApp;
@@ -17,9 +16,9 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
-        builder.Services.AddHttpClient<TestController>();
-        builder.Services.AddScoped<IGoodbyeService, GoodbyeService>();
         builder.Services.AddHttpClient<SecondoServizio>();
+        //builder.Services.AddScoped<SecondoServizio>();
+        //builder.Services.AddScoped<ServizioInterno>();
 
         var app = builder.Build();
 

@@ -10,4 +10,9 @@ public class SecondoServizio
         this.http = http;
         this.servizioInterno = servizioInterno;
     }
+
+    public string GetString()
+    {
+        return servizioInterno.Hello();
+    }
 }
