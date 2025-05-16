@@ -22,13 +22,12 @@ public class DependencyInjectorValidatorGenerator : IIncrementalGenerator
                 if (symbol is INamedTypeSymbol)
                 {
                     INamedTypeSymbol namedTypeSymbol = (INamedTypeSymbol)symbol;
-                    if (namedTypeSymbol.BaseType.Name == "ControllerBase")
+                    if (namedTypeSymbol.BaseType.Name == "ControllerBase" ||
+                        namedTypeSymbol.BaseType.Name == "Controller")
                     {
                         StringBuilder sb = new();
                         sb.Insert(0, namedTypeSymbol.Name);
                         INamespaceSymbol nameSpace = namedTypeSymbol.ContainingNamespace;
-                        //sb.Insert(0, ".");
-                        //sb.Insert(0, nameSpace.Name);
                         while (nameSpace != null &&
                             nameSpace.ContainingNamespace != null)
                         {

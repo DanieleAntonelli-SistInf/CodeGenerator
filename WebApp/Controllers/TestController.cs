@@ -7,16 +7,16 @@ namespace WebApp.Controllers;
 [Route("[controller]")]
 public class TestController : ControllerBase
 {
-    private readonly ServizioContenenteHttpClient secondoServizio;
+    private readonly ServizioContenenteHttpClient servizioContenenteHttpClient;
 
     public TestController(ServizioContenenteHttpClient secondoServizio)
     {
-        this.secondoServizio = secondoServizio;
+        this.servizioContenenteHttpClient = secondoServizio;
     }
 
     [HttpGet]
     public string Test()
     {
-        return secondoServizio.GetString();
+        return servizioContenenteHttpClient.GetString();
     }
 }

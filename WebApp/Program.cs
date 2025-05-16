@@ -36,6 +36,7 @@ public class Program
 
         app.MapControllers();
 
+        // Verifica che tutti i controller possano essere creati
         if (app.Environment.IsDevelopment())
         {
             SampleSourceGenerator.DependencyInjectionValidationResult result = SampleSourceGenerator.DependencyInjectorValidator.Validate(app);
@@ -44,6 +45,7 @@ public class Program
                 throw new InvalidOperationException(result.Message);
             }
         }
+
         app.Run();
     }
 }
