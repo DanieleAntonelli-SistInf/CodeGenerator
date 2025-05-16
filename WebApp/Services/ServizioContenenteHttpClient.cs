@@ -1,11 +1,11 @@
 ﻿namespace WebApp.Services;
 
-public class SecondoServizio
+public class ServizioContenenteHttpClient
 {
     HttpClient http;
     ServizioInterno servizioInterno;
 
-    public SecondoServizio(HttpClient http, ServizioInterno servizioInterno)
+    public ServizioContenenteHttpClient(HttpClient http, ServizioInterno servizioInterno)
     {
         this.http = http;
         this.servizioInterno = servizioInterno;

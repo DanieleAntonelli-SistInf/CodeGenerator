@@ -16,7 +16,7 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
-        builder.Services.AddHttpClient<SecondoServizio>();
+        builder.Services.AddHttpClient<ServizioContenenteHttpClient>();
         //builder.Services.AddScoped<SecondoServizio>();
         //builder.Services.AddScoped<ServizioInterno>();
 

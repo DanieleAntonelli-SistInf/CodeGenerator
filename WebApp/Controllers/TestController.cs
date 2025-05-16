@@ -5,11 +5,11 @@ namespace WebApp.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class SecondoController : ControllerBase
+public class TestController : ControllerBase
 {
-    private readonly SecondoServizio secondoServizio;
+    private readonly ServizioContenenteHttpClient secondoServizio;
 
-    public SecondoController(SecondoServizio secondoServizio)
+    public TestController(ServizioContenenteHttpClient secondoServizio)
     {
         this.secondoServizio = secondoServizio;
     }
